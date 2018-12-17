@@ -7,6 +7,9 @@ while going:
     question = input("Ask the 8 ball a question or enter Q to quit:  ")
     answers = random.randint(1,8)
 
+    print("thinking...")
+    time.sleep(2) 
+
     if question.lower() == "q":
         exit()
   
