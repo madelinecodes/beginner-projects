@@ -1,30 +1,35 @@
 import random
 playing = True
-
+score = {'human': 0, 'comp': 0}
     
+def get_score(score):
+    return 'Human: {human} - Computer: {comp}'.format(human=score['human'], comp=score['comp'])
+
 while playing:
-    roll =(input("Type Rock, Paper, Scissors or Q to stop playing:  ")).capitalize()
-    comp = random.randint(1,3)
-    if comp == 1:
-        comp = 'Rock'
-    elif comp == 2:
-        comp = 'Paper'
-    elif comp == 3:
-        comp = 'Scissors'
+    roll = input("Type Rock, Paper, Scissors or Q to stop playing:  ").capitalize()
+    rnd = random.randint(0, 2)
+    moves = ['Rock', 'Paper', 'Scissors']
+    move = moves[rnd]
     if roll == "Q":
         exit()
-    elif roll not in ('Rock','Paper','Scissors'):
+    elif roll not in moves:
         print("typo?")
     else:
-        if roll == comp:
-            print("You chose {roll} and the computer chose {comp}.".format(roll = roll, comp = comp))
+        if roll == move:
+            print("You chose {roll} and the computer chose {move}.".format(roll = roll, move = move))
             print("That's a draw")
-        elif roll == 'Rock' and comp == 'Paper':
-            print('Paper beats Rock. You lose!')
-        elif roll == 'Paper' and comp == 'Scissors':
+        elif roll == 'Rock' and move == 'Paper':
+            print('Paper beats rock. You lose!')
+            score['comp'] += 1
+        elif roll == 'Paper' and move == 'Scissors':
             print('Scissors cuts paper. You lose!')
-        elif roll == 'Scissors' and comp == 'Rock':
+            score['comp'] += 1
+        elif roll == 'Scissors' and move == 'Rock':
             print('Rock smashes scissors. You lose!')
+            score['comp'] += 1
         else:
-            print("You chose {roll} and the computer chose {comp}.".format(roll = roll, comp = comp))
+            print("You chose {roll} and the computer chose {move}.".format(roll = roll, move = move))
             print("You win!")
+            score['human'] += 1
+
+    print(get_score(score))

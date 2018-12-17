@@ -4,7 +4,11 @@ while True:
         exit()
     else:
         sides = sorted(sides.split(","),reverse=True)
-        if int(sides[1])**2 + int(sides[2])**2 == int(sides[0])**2:
+
+        def sqr(side):
+            return int(side)**2
+            
+        if sqr(sides[1]) + sqr(sides[2]) == sqr(sides[0]) :
             print("You have a pythagorean triple on your hands.") 
         else:
             print("Nope, that one is not a pythagorean triple. ")
