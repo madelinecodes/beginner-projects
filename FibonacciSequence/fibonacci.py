@@ -40,5 +40,4 @@ elif last == 3:
     nth = str(nth)+"rd"
 else:
     nth = str(nth)+"th"
-
 print("The {nth} number has a value of {v}!".format(nth=nth, v=v))
