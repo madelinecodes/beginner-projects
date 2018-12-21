@@ -1,17 +1,3 @@
-'''class food:
-    def __init__(self, id, name, price):
-        self.id = id
-        self.name = name
-        self.price = price
-    def order(self):
-
-
-
-
-print(f1.name)
-print(f1.price)'''
-
-
 class Menu:
     def __init__(self, *args):
         self.items = dict()
