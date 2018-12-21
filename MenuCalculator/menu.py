@@ -28,7 +28,6 @@ class Menu:
             total = 0
             for idx in range(0, len(nums)):
                 key = nums[idx]
-                # access tje 
                 total += self.items[key][2]
             print(total)
 
@@ -44,15 +43,3 @@ fast_food_menu = Menu(
 )
 
 fast_food_menu.take_input()
-
-
-food = {
-"Chicken Strips": 3.50,
-"French Fries": 2.50,
-"Hamburger ": 4.00,
-"Hotdog ": 3.50,
-"Large Drink": 1.75,
-"Medium Drink": 1.50,
-"Salad": 3.75,
-"Small Drink": 1.25
-}
