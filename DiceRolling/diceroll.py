@@ -1,6 +1,5 @@
 import random
-rolling = True 
-while  :
+while True:
     sides = input("How many sides would you like your die to have?  ")
     times = input("How many times should I roll it for you?  ")
     try: 
