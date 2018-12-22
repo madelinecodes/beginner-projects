@@ -1,7 +1,7 @@
 import math
 num = 10
 def is_prime(num):
-    for i in range(2, num - 1):
+    for i in range(2, num):
         if (num % i) == 0:
             is_prime = False
             break
