@@ -4,8 +4,11 @@ def is_prime(i):
     for j in range(2, i):
         if (i % j) == 0:
             is_prime = False
-        else:
+            break
+        elif (i % j) != 0 :
             is_prime = True
+        else:
+           break
     return is_prime
 
 def factor(x):
@@ -25,7 +28,7 @@ def factor(x):
                     facts.append(i)
         return facts
     elif x == 0:
-        print("All numbers are factors of Zero my friend.")
+        print("All numbers are factors of zero my friend.")
 print (', '.join(map(str, factor(x))))
 print('*indicates a prime number')
 
