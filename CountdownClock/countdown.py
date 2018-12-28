@@ -22,7 +22,8 @@ def days_hours_minutes(td):
 while True:
     # The below is a tuple and can be accessed via [index]
     time_left = days_hours_minutes(diff)
-    print('There are {a} days, {b} hours, {c} minutes, and {d} seconds'.format(a = time_left['days'], b = time_left['hours'], c = time_left['minutes'], d = time_left['seconds']))
+    print('There are {a} days, {b} hours, {c} minutes, and {d} seconds left until {fdate}(at {ftime})'.format(
+            a = time_left['days'], b = time_left['hours'], c = time_left['minutes'], d = time_left['seconds'], fdate = fdate, ftime = ftime))
     time.sleep(5)
     diff -= timedelta(seconds=5)
 
