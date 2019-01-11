@@ -1,3 +1,5 @@
+UNFINISHED
+
 num = input("Number:  ")
 curr_base = int(input("Current base:  "))
 new_base = int(input("Desired base:  "))
